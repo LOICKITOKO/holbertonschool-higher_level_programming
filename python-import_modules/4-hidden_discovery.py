@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-import sys
-import hidden_4 as hidden
+import dis
+import marshal
 
-if __name__ != "__main__":
-    exit()
+with open('/tmp/hidden_4.pyc', 'rb') as fichier:
+    code = marshal.load(fichier)
 
-for name in dir(hidden):
-    if name[0:2] != "__":
-        print(name)
+noms = set()
+for instruction in dis.get_instructions(code):
+    if instruction.opname == 'STORE_NAME' and not instruction.argrepr.startswith('__'):
+        noms.add(instruction.argrepr)
+
+for nom in sorted(noms):
+    print(nom)
