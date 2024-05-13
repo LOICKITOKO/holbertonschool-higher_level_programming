@@ -4,3 +4,5 @@ def print_matrix_integer(matrix=[[]]):
         for num in row:
             print("{:d}".format(num), end=" ")
         print()
+    if not matrix:
+        print()
