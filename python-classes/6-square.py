@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/pythonif3
 """Defines a class Square"""
 
 
