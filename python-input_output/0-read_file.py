@@ -2,7 +2,5 @@
 
 
 def read_file(filename=""):
-    with open(filename, "r", encoding="utf-8") as file:
-            content = file.read()
-            print(content)
-
+    with open(filename, "r", encoding="UTF-8") as f:
+        print(f.read(), end="")
