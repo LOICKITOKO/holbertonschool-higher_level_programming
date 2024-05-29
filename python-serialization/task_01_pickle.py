@@ -32,4 +32,3 @@ class CustomObject:
         except (FileNotFoundError, pickle.PickleError) as e:
             print(f"Deserialization error: {e}")
             return None
-
