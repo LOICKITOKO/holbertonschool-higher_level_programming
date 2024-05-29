@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 
 
 def serialize_to_xml(dictionary, filename):
+    '''Serialize a dictionary to an XML file'''
     root = ET.Element("data")
     for key, value in dictionary.items():
         child.text = str(value)
@@ -11,6 +12,7 @@ def serialize_to_xml(dictionary, filename):
     tree.write(filename)
 
 def deserialize_from_xml(filename):
+    '''Deserialize an XML file to a dictionary'''
     try:
         tree = ET.parse(filename)
         root = tree.getroot()
