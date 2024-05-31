@@ -38,9 +38,3 @@ class Server(BaseHTTPRequestHandler):
             self.send_response(404)
             self.end_headers()
             self.wfile.write(bytes("Endpoint not found", encoding='utf8'))
-
-
-if __name__ == "__main__":
-    server = HTTPServer((HOSTNAME, PORT), Server)
-    print(f'Server started at port {PORT}...')
-    server.serve_forever()
