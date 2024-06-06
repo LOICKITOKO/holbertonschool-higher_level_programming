@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 """
-
-function prints a message
-
+    function prints a message
 """
 
-def say_my_name(first_name, last_name=""):
 
+def say_my_name(first_name, last_name=""):
     """
 
     Prints a full name
