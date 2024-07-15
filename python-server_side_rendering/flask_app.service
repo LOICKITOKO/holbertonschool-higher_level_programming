@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn instance to serve Flask app
+After=network.target
+
+[Service]
+User=yourusername  # Remplacez par votre nom d'utilisateur
+Group=www-data
+WorkingDirectory=/path/to/your/project  # Remplacez par le chemin vers votre projet
+ExecStart=/usr/bin/gunicorn --workers 4 --bind 127.0.0.1:8000 task_01_jinja:app
+
+[Install]
+WantedBy=multi-user.target
