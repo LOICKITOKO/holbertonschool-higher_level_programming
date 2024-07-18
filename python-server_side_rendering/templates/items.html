@@ -1,0 +1,21 @@
+<!-- templates/items.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des articles</title>
+</head>
+<body>
+    <h1>Liste des articles</h1>
+    
+    {% if items %}
+        <ul>
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun article trouvé.</p>
+    {% endif %}
+    
+</body>
+</html>
